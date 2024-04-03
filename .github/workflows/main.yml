@@ -29,8 +29,8 @@ jobs:
     - name: build the payload
       shell: bash
       run: |
-        make -C payloads/coreinfoolddefconfig
-        make -C payloads/coreinfo
+        make -C ${{github.workspace}}/payloads/coreinfoolddefconfig
+        make -C ${{github.workspace}}/payloads/coreinfo
     - name: configure the build
       shell: bash
       run: |
