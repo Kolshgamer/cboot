@@ -33,7 +33,7 @@ jobs:
     - name: build the payload
       shell: bash
       run: |
-        make -C payloads/coreinfoolddefconfig
+        make -C payloads/coreinfo olddefconfig
         make -C payloads/coreinfo
     - name: configure the build
       shell: bash
