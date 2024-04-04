@@ -18,23 +18,8 @@ jobs:
       shell: bash
       run: |
         sudo apt-get install -y bison build-essential curl flex git gnat libncurses5-dev libssl-dev m4 zlib1g-dev pkg-config
-    - name: build i386 toolchain
-      shell: bash
-      run: |
-        make crossgcc-i386 CPUS=$(nproc)
-    - name: build Aarch64 toolchain
-      shell: bash
-      run: |
-        make crossgcc-aarch64 CPUS=$(nproc)
-    - name: build RISC-V toolchain
-      shell: bash
-      run: |
-        make crossgcc-riscv CPUS=$(nproc)
-    - name: build the payload
-      shell: bash
-      run: |
-        make -C payloads/coreinfo olddefconfig
-        make -C payloads/coreinfo
+        make help_toolchain
+        
     - name: configure the build
       shell: bash
       run: |
