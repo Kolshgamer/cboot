@@ -17,7 +17,7 @@ jobs:
     - name: install required
       shell: bash
       run: |
-        sudo apt-get install -y bison
+        sudo apt-get install -y bison build-essential curl flex git gnat libncurses5-dev libssl-dev m4 zlib1g-dev pkg-config
     - name: build i386 toolchain
       shell: bash
       run: |
